@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6CA7173A-6302-4C5C-B054-A2BB4DC3D5B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebsiteUnitTestRunner.Testing.UnitTesting</RootNamespace>
+    <AssemblyName>WebsiteUnitTestRunner.Testing.UnitTesting</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asserts\Assert_AreEqual.cs" />
+    <Compile Include="Asserts\Assert_AreNotEqual.cs" />
+    <Compile Include="Asserts\Assert_Contains.cs" />
+    <Compile Include="Asserts\Assert_Fail.cs" />
+    <Compile Include="Asserts\Assert_IsEmpty.cs" />
+    <Compile Include="Asserts\Assert_IsFalse.cs" />
+    <Compile Include="Asserts\Assert_IsInstanceOfType.cs" />
+    <Compile Include="Asserts\Assert_IsNotEmpty.cs" />
+    <Compile Include="Asserts\Assert_IsNotInstanceOfType.cs" />
+    <Compile Include="Asserts\Assert_IsNotNull.cs" />
+    <Compile Include="Asserts\Assert_IsNull.cs" />
+    <Compile Include="Asserts\Assert_IsTrue.cs" />
+    <Compile Include="Attributes\TestFixtureSetupAttribute.cs" />
+    <Compile Include="Attributes\TestAttribute.cs" />
+    <Compile Include="Attributes\TestCollectionAttribute.cs" />
+    <Compile Include="Attributes\TestExpectedException.cs" />
+    <Compile Include="Attributes\TestFixtureAttribute.cs" />
+    <Compile Include="Attributes\TestFixtureTeardownAttribute.cs" />
+    <Compile Include="Attributes\TestSetupAttribute.cs" />
+    <Compile Include="Attributes\TestTeardownAttribute.cs" />
+    <Compile Include="BaseClasses\TestExtendedLogData.cs" />
+    <Compile Include="BaseClasses\TestResultBase.cs" />
+    <Compile Include="BaseClasses\TestResultData.cs" />
+    <Compile Include="BaseClasses\TestResultSummary.cs" />
+    <Compile Include="BaseClasses\UnitTestBase.cs" />
+    <Compile Include="BaseClasses\UnitTestBaseHttpHandler.cs" />
+    <Compile Include="BaseClasses\UnitTestHttpHandlerRouteHandler.cs" />
+    <Compile Include="BaseClasses\UnitTestLogDataEventArgs.cs" />
+    <Compile Include="TestRunner.cs" />
+    <Compile Include="Enums\AvailableContentReturnTypes.cs" />
+    <Compile Include="Enums\TestOptions.cs" />
+    <Compile Include="Exceptions\AssertionFailedException.cs" />
+    <Compile Include="Exceptions\InvalidTestClassException.cs" />
+    <Compile Include="Exceptions\InvalidTestFixtureException.cs" />
+    <Compile Include="Exceptions\TestClassNotInAssembliesException.cs" />
+    <Compile Include="Handlers\UnitTestHandler.cs" />
+    <Compile Include="Handlers\UnitTestHttpHandlerExtensions.cs" />
+    <Compile Include="Interfaces\ITestCollection.cs" />
+    <Compile Include="Interfaces\ITestResults.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\default.xslt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
