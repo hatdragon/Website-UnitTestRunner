@@ -2,7 +2,7 @@
 
 
 ##Abstract
-This document outlines a baseline for an ASP.NET based unit test framework.  It will define the basic outline, workflow, and underlining technology used in this implementation. 
+This document outlines a baseline for an ASP.NET based unit test framework.  It will define the basic outline, workflow, and underlining technology used in this implementation. This is primarily used to test non-web application type ASP.NET web sites. 
 
 ###Getting Started
 This section will provide you with the very basic information that is needed to get started with this unit test framework in the context of your web solutions.  This will provide a step by step guide to installation of needed components and their usage. 
